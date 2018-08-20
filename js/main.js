@@ -86,13 +86,15 @@ window.onload = startSlide();
 // }
 
 function cambiarImg() {
-  img = imgRandom.children[0];
-  //console.log(img);
-  fetch(url)
-    .then(res => res)
-    .then(data => {
-      //   console.log(data.url);
-      img.setAttribute("src", data.url);
-    })
-    .catch(err => console.log(err));
+  setTimeout(() => {
+    img = imgRandom.children[0];
+    //console.log(img);
+    fetch(url)
+      .then(res => res)
+      .then(data => {
+        //   console.log(data.url);
+        img.setAttribute("src", data.url);
+      })
+      .catch(err => console.log(err));
+  }, 1000);
 }
